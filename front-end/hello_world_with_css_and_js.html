@@ -1,0 +1,33 @@
+<html>
+<style>
+    body {
+        text-align: center;
+    }
+    #the_id {
+        color: yellow;
+        background: blue;
+    }
+    .a_class {
+        color: #19FF19;
+    }
+</style>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1 id='the_id'>Hello world</h1>
+    </body>
+<script>
+    var clicks = 0
+    document.body.onclick = function () {
+        alert('You clicked the document '+(clicks++)+' times!')
+    }
+    var hovers = 0
+    document.getElementById('the_id').onmouseover = function () {
+        var p = document.createElement('p')
+        p.textContent = 'You hovered over the header '+(hovers++)+' times'
+        p.className = 'a_class'
+        document.body.appendChild(p)
+    }
+</script>
+</html>
